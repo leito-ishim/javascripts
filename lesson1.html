@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Document</title>
+	<script async src="task2.js"></script>
+	<script defer src="task1.js"></script>
+	
+	<script type="text/javascript">
+		var a = 1000 + '108'
+		alert(a); // Выражение 1000 + "108" = 1000108
+		// атрибуты async и defer нужны для того чтобы браузер загружал скрипт параллельно  со страницей HTML (в фоновом режиме). Иначе он не отобразит страницу пока не загрузит все скрипты.
+		// причем defer - загрузит все скрипты параллельно, но запускать их будет в порядк очереди
+		// a async - загрузит скрипты параллелно и какой первый загрузится тот сразу и выполнится, независимо от других
+	</script>
+	
+</head>
+<body>
+
+</body>
+</html>
