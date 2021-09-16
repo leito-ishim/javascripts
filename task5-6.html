@@ -1,0 +1,43 @@
+<script type="text/javascript">
+	/* 5. Реализовать основные 4 арифметические операции в виде функций с двумя параметрами. Обязательно использовать оператор return.	*/
+
+	function add(a, b) {
+		return a + b
+	};
+
+	function sub(a, b) {
+		return a - b
+	};
+
+	function mul(a, b) {
+		return a * b
+	};
+
+	function div(a, b) {
+		return a / b
+	};
+
+	/*6. Реализовать функцию с тремя параметрами: function mathOperation(arg1, arg2, operation), где arg1, arg2 – значения аргументов, operation – строка с названием операции. В зависимости от переданного значения операции выполнить одну из арифметических операций (использовать функции из пункта 3) и вернуть полученное значение (использовать switch).*/
+
+	function mathOperation(arg1, arg2, operation) {
+		var c;
+		switch (operation) {
+			case '+': c = add(arg1, arg2);
+			break;
+			case '-': c = sub(arg1, arg2);
+			break;
+			case '*': c = mul(arg1, arg2);
+			break;
+			case '/': c = div(arg1, arg2);
+			break;
+			default: c = 'Нет такого знака: ' + operation
+		};
+		return c;
+	}
+		
+	console.log(mathOperation(3, 3, '+'));
+	console.log(mathOperation(3, 3, '-'));
+	console.log(mathOperation(3, 3, '*'));
+	console.log(mathOperation(3, 3, '/'));
+	console.log(mathOperation(3, 3, '%'));
+</script>
