@@ -1,0 +1,17 @@
+<script type="text/javascript">
+	// Нарисовать пирамиду с помощью console.log, как показано на рисунке, только у вашей пирамиды должно быть 20 рядов, а не 5:
+	var a = '';
+	for (var i = 1; i <= 20; i++) {
+		a += 'x';
+		console.log(a);
+	};
+	
+	// Пирамидка поинтереснее
+	var n = 10;
+	for (var i = 0; i <= n; i++) {
+		console.log('_'.repeat(n-i) + 'x'.repeat(2*i+1) + '_'.repeat(n-i));
+	};
+
+
+
+</script>
