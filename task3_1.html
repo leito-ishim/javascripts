@@ -1,0 +1,22 @@
+<script type="text/javascript">
+	// 1. С помощью цикла while вывести все простые числа в промежутке от 0 до 100.
+
+	var n = 2;
+
+	while (n <= 100) {
+		var i = 2;
+		var flag = false;
+		while (flag == false) {
+			if (n % i == 0) {
+				flag = true;
+			};
+			if (i == Math.floor(n / 2) ) {
+				console.log(n);
+				flag = true;
+			};
+			i++;
+		};
+		n++;
+	};
+
+</script>
