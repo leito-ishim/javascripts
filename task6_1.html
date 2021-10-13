@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Картинки</title>
+</head>
+<body>
+<!-- 	<button id='b1'>Показать картинки</button>
+ -->	
+	<button id='b_prev' onclick="fPrev()"><</button>
+	<img id="i1" onerror="imgError()" src="big/img1.png">
+	<button id='b_next' onclick="fNext()">></button>
+
+</body>
+
+<script type="text/javascript">
+	var img = []
+	for (var i = 1; i < 5; i++) {
+		img[i] = document.createElement('img');
+		img[i].src = 'small/img' + i + '.png';
+		document.body.append(img[i]);
+		img[i].onclick = f;
+	}
+
+	var imgBig = [];
+	for (var j = 1; j < 5; j++) {
+		imgBig[j] = document.createElement('img');
+		imgBig[j].src = 'big/img' + j + '.png';
+	}
+
+	function f(e) {
+		var img = document.querySelector('#i1');
+		var a = this.src.replace('small', 'big');
+		img.src = a;			
+	}
+
+	function imgError() {		
+		alert('Нет такой картинки');
+		var img = document.querySelector('#i1');
+		console.log(img.src);
+		img.src = 'big/img1.png';
+	}
+
+	function fPrev() {
+		var img = document.querySelector('#i1');
+		//console.log(img.src);
+		console.log(imgBig.indexOf(img));
+	}
+
+
+
+	// var images = document.querySelectorAll('img');
+
+	// for (var img of images) {
+	// 	img.onclick = function(e){
+	// 		var bigImg = img.src;
+	// 		console.log(bigImg);
+	// 	}
+	// }
+	
+</script>
+</html>
